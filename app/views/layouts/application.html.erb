@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dazt</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="top-pad">
+        <div class="container">
+            <%= link_to "burn<span>studio</span>".html_safe, "", id: "logo"%>
+            <nav class="main-nav">
+                <ul>
+                    <li><%= link_to "portfolio", "", class: "selected" %></li>
+                    <li><span>/</span><%= link_to "about me", "" %></li>
+                    <li><span>/</span><%= link_to "contact me", "" %></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <%= yield %>
+    
+</body>
+</html>
